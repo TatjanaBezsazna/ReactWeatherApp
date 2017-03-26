@@ -18,11 +18,11 @@ var WeatherMessage = (/*props*/{location, temp}) => {
 	
 	//var {location, temp} = props;
 	
-	var message = "It is " + temp + " in " + location;
+	var message = "It is " + temp + " \u2103 in " + location;
 	
 	return (
 		
-		<p ref='message'>{message}</p>
+		<h3 ref='message' className='text-center'>{message}</h3>
 		
 	)
 	
