@@ -16,7 +16,7 @@ $(document).foundation();
 
 //App CSS
 
-require('style!css!applicationStyles');
+require('style!css!sass!applicationStyles');
 
 //<Route path="/" component={Main}> Main component gets rendered because it matches the path (/);
 //<Route path="/" component={Main}> will always get rendered, but if path matches any path of children elements - respective child will be rendered
