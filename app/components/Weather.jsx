@@ -4,6 +4,10 @@ var WeatherMessage = require('WeatherMessage');
 var OpenWeatherMap = require('OpenWeatherMap');
 var ErrorModal = require('ErrorModal');
 
+String.prototype.capitalizeFirstLetter = function() {
+    return this.charAt(0).toUpperCase() + this.slice(1);
+}
+
 var Weather = React.createClass({
 	
 	getInitialState: function () {
@@ -27,14 +31,14 @@ var Weather = React.createClass({
 		
 		this.setState({
 			isLoading:true,
-			errorMessage: undefined, 
-			location: undefined,
-			temp: undefined
+			errorMessage: null, 
+			location: null,
+			temp: null
 		});
 		
 		OpenWeatherMap.getTemp(location).then(function(temp){
 			that.setState({
-				location: location,
+				location: location.capitalizeFirstLetter(),
 				temp: temp,
 				isLoading:false,
 			});
@@ -66,7 +70,7 @@ var Weather = React.createClass({
 				
 				return <h3 className='text-center'>Fetching weather...</h3>
 				
-			} else if (location !== undefined && temp !== undefined) {
+			} else if (location && temp !== undefined) {
 				
 				return <WeatherMessage location={location} temp={temp}/>
 				

@@ -24,7 +24,7 @@ var About = (props) => {
 					<a href='https://facebook.github.io/react'>React</a> - This was the JavaScript framework used.
 				</li>
 				<li>
-					<a href='https://openweathermap.org/'>Open Weather Map</a> - I used Open Weather Map to search for weather data bby city name.
+					<a href='https://openweathermap.org/'>Open Weather Map</a> - I used Open Weather Map to search for weather data by city name.
 				</li>
 				<li>
 					<a href='https://www.udemy.com/the-complete-react-web-app-developer-course/'>The Complete React Web App Developer Course</a> - Udemy course I have taken to get familiar with React, as well as to build this application.
